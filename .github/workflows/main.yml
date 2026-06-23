@@ -1,1 +1,28 @@
-gh repo clone rahulsan-22/React-Tutorial-A3
+import React from 'react'
+let movies = [
+  { id: 1, name: "Salaar", hero: "Prabhas", herione: "Shruthi Hasan" },
+  { id: 2, name: "Mirchi", hero: "Prabhas", herione: "Anushka Shetty" },
+  { id: 3, name: "OG", hero: "Pawan Kalyan", herione: "Priyanka Mohan" }
+]
+const List = () => {
+  return (
+    <div>
+      <h1>List of movies and their cast</h1>
+      <hr />
+      {
+        movies.map((item) => {
+          return <section key={item.id}>
+            <div>
+              <h1>Id : {item.id}</h1>
+              <h1>Movie Name : {item.name}</h1>
+              <h1>Hero:{item.hero}</h1>
+              <h1>Herione:{item.herione}</h1>
+            </div>
+            <hr />
+          </section>
+        })
+      }
+    </div>
+  )
+}
+export default List
